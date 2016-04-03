@@ -33,7 +33,7 @@ static CGFloat const kCircleDiameter = 230;
         _endDegree = 130;
         _dividedStep = 31;
         _totalSteps = 31;
-        _levelColor = [UIColor colorWithRed:32.0/255.0 green:197.0/255.0 blue:102.0/255.0 alpha:1.0];//[UIColor colorWithRGBA:0x31B27B alpha:1.0];
+        _levelColor = [UIColor colorWithRed:32.0/255.0 green:197.0/255.0 blue:102.0/255.0 alpha:1.0];
         _minValue = 500;
         _maxValue = 900;
         
@@ -55,7 +55,7 @@ static CGFloat const kCircleDiameter = 230;
         circleRect = CGRectInset(rect, 20, 20);
     }
     
-    CGFloat radius = MIN(circleRect.size.width, circleRect.size.height)/2;
+//    CGFloat radius = MIN(circleRect.size.width, circleRect.size.height)/2;
     CGPoint center = CGPointMake(rect.size.width/2, rect.size.height/2);
 
     CGFloat step = self.dividedStep;
@@ -85,9 +85,7 @@ static CGFloat const kCircleDiameter = 230;
     grad.colors = @[(id)[UIColor colorWithRed:246.0/255.0 green:71.0/255.0 blue:71.0/255.0 alpha:1.0].CGColor,
                     (id)[UIColor colorWithRed:253.0/255.0 green:188.0/255.0 blue:51.0/255.0 alpha:1.0].CGColor,
                     (id)[UIColor colorWithRed:32.0/255.0 green:197.0/255.0 blue:102.0/255.0 alpha:1.0].CGColor];
-//    grad.colors = @[(id)[UIColor colorWithRGBA:0xFF2300 alpha:1.0].CGColor,
-//                    (id)[UIColor colorWithRGBA:0xF2D122 alpha:1.0].CGColor,
-//                    (id)[UIColor colorWithRGBA:0x31B27B alpha:1.0].CGColor];
+
     grad.startPoint = CGPointMake(0, 0);
     grad.endPoint = CGPointMake(1, 0);
     grad.locations = @[@0.15, @0.55, @0.8];
@@ -116,42 +114,6 @@ static CGFloat const kCircleDiameter = 230;
         [squarePath fill];
         [path appendPath:squarePath];
     }
-   
-    return;
-    
-    CAShapeLayer *arc = [CAShapeLayer layer];
-    CGFloat startAngle = DEGREES_TO_RADIANS(self.startDegree-90);
-    CGFloat endAngle = DEGREES_TO_RADIANS(self.endDegree-90);
-    UIBezierPath *arcPath = [UIBezierPath bezierPathWithArcCenter:center radius:radius-28 startAngle:startAngle endAngle:endAngle clockwise:YES];
-    arc.path = arcPath.CGPath;
-    arc.fillColor = [UIColor clearColor].CGColor;
-    arc.strokeColor = self.levelColor.CGColor;
-    arc.lineWidth = 12;
-    arc.lineCap = kCALineCapRound;
-    
-    [self.layer addSublayer:arc];
-
-    NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-    /// Set line break mode
-    paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
-    /// Set text alignment
-    paragraphStyle.alignment = NSTextAlignmentCenter;
-    NSString *desc = @"信用等级 优秀";
-    NSString *footer = @"最新评估：2016.03.17";
-    [@"786" drawInRect:CGRectMake(20, 86, rect.size.width-40, 54) withAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:50],
-                                                                    NSParagraphStyleAttributeName:paragraphStyle}];
-    [desc drawInRect:CGRectMake(20, 144, rect.size.width-40, 40) withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13],
-                                                                                   NSParagraphStyleAttributeName:paragraphStyle,
-                                                                                    NSForegroundColorAttributeName:self.levelColor}];
-    [footer drawInRect:CGRectMake(20, 196, rect.size.width-40, 40) withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:11],
-                                                                                  NSParagraphStyleAttributeName:paragraphStyle,
-                                                                                  NSForegroundColorAttributeName:[UIColor colorWithRGBA:0x999999 alpha:1.0]}];
-    NSString *startValue = [NSString stringWithFormat:@"%f", self.minValue];
-    NSString *maxValue = [NSString stringWithFormat:@"%f", self.maxValue];
-    [startValue drawInRect:CGRectMake(center.x-112, 204, 20, 20) withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10],
-                                                                        NSForegroundColorAttributeName:[UIColor colorWithRGBA:0x999999 alpha:1.0]}];
-    [maxValue drawInRect:CGRectMake(center.x+92, 204, 20, 20) withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10],
-                                                                        NSForegroundColorAttributeName:[UIColor colorWithRGBA:0x999999 alpha:1.0]}];
 }
 
 

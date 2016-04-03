@@ -14,10 +14,8 @@
 		2F595F1C1C36B82100B560F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F595F1B1C36B82100B560F6 /* Assets.xcassets */; };
 		2F595F1F1C36B82100B560F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F595F1D1C36B82100B560F6 /* LaunchScreen.storyboard */; };
 		2F595F281C36B84300B560F6 /* GradientArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F595F271C36B84300B560F6 /* GradientArcView.m */; };
-		2FA28A061CAA70410071AF41 /* GradientLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA28A051CAA70410071AF41 /* GradientLineView.m */; };
 		2FA28A381CABD0720071AF41 /* BezierPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA28A371CABD0720071AF41 /* BezierPathView.m */; };
 		2FA28A421CAD261D0071AF41 /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA28A411CAD261D0071AF41 /* UIColor+Helper.m */; };
-		2FD846C11CAE81760057CFEA /* CreditButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD846C01CAE81760057CFEA /* CreditButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,15 +31,10 @@
 		2F595F201C36B82100B560F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F595F261C36B84300B560F6 /* GradientArcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientArcView.h; sourceTree = "<group>"; };
 		2F595F271C36B84300B560F6 /* GradientArcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientArcView.m; sourceTree = "<group>"; };
-		2FA28A041CAA70410071AF41 /* GradientLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientLineView.h; sourceTree = "<group>"; };
-		2FA28A051CAA70410071AF41 /* GradientLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientLineView.m; sourceTree = "<group>"; };
 		2FA28A361CABD0720071AF41 /* BezierPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierPathView.h; sourceTree = "<group>"; };
 		2FA28A371CABD0720071AF41 /* BezierPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierPathView.m; sourceTree = "<group>"; };
-		2FA28A3F1CAD25E80071AF41 /* StringConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringConstants.h; sourceTree = "<group>"; };
 		2FA28A401CAD261D0071AF41 /* UIColor+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
 		2FA28A411CAD261D0071AF41 /* UIColor+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
-		2FD846BF1CAE81760057CFEA /* CreditButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditButton.h; sourceTree = "<group>"; };
-		2FD846C01CAE81760057CFEA /* CreditButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,19 +69,14 @@
 			children = (
 				2FA28A401CAD261D0071AF41 /* UIColor+Helper.h */,
 				2FA28A411CAD261D0071AF41 /* UIColor+Helper.m */,
-				2FA28A3F1CAD25E80071AF41 /* StringConstants.h */,
 				2F595F261C36B84300B560F6 /* GradientArcView.h */,
 				2F595F271C36B84300B560F6 /* GradientArcView.m */,
-				2FA28A041CAA70410071AF41 /* GradientLineView.h */,
-				2FA28A051CAA70410071AF41 /* GradientLineView.m */,
 				2F595F121C36B82100B560F6 /* AppDelegate.h */,
 				2F595F131C36B82100B560F6 /* AppDelegate.m */,
 				2F595F151C36B82100B560F6 /* ViewController.h */,
 				2F595F161C36B82100B560F6 /* ViewController.m */,
 				2FA28A361CABD0720071AF41 /* BezierPathView.h */,
 				2FA28A371CABD0720071AF41 /* BezierPathView.m */,
-				2FD846BF1CAE81760057CFEA /* CreditButton.h */,
-				2FD846C01CAE81760057CFEA /* CreditButton.m */,
 				2F595F181C36B82100B560F6 /* Main.storyboard */,
 				2F595F1B1C36B82100B560F6 /* Assets.xcassets */,
 				2F595F1D1C36B82100B560F6 /* LaunchScreen.storyboard */,
@@ -176,9 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FD846C11CAE81760057CFEA /* CreditButton.m in Sources */,
 				2F595F171C36B82100B560F6 /* ViewController.m in Sources */,
-				2FA28A061CAA70410071AF41 /* GradientLineView.m in Sources */,
 				2F595F281C36B84300B560F6 /* GradientArcView.m in Sources */,
 				2F595F141C36B82100B560F6 /* AppDelegate.m in Sources */,
 				2FA28A421CAD261D0071AF41 /* UIColor+Helper.m in Sources */,
